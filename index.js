@@ -1,7 +1,8 @@
 const express = require("express")
 const app = express()
 const expenseRoutes = require("./routes/expenseRoute")
-
+const cors = require("cors")
+app.use(cors())
 app.use(express.json())
 app.use("/api", expenseRoutes)
 
